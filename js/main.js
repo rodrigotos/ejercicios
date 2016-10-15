@@ -56,3 +56,23 @@ console.log(ar3);
 ar3.forEach(function(element, index, array){
   console.log("index " + index + " element " + element);
 });
+
+
+var str = "a e i o u";
+var str_array = Array.from(str);
+var index = 0;
+var vowels = ["a","e","i","o","u"], result = {};
+
+for(index = 0; index < str_array.length; index++)
+{
+  if(vowels.indexOf(str_array[index]) >= 0){
+    // El ìnidice del caracter str_array[index]
+    if(!result[str_array[index]]){
+      result[str_array[index]] = 1;
+    }else{
+      result[str_array[index]]++;
+    }
+  }
+}
+
+console.log(result);
